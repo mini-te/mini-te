@@ -1,0 +1,4 @@
+#!/bin/bash
+ovs-vsctl add-port s3 s3-gre1 -- set interface s3-gre1 type=gre options:remote_ip=192.168.0.1 options:key=2
+
+ovs-vsctl add-port s4 s4-gre2 -- set interface s4-gre2 type=gre options:remote_ip=192.168.0.1 options:key=1

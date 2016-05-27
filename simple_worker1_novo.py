@@ -1,0 +1,97 @@
+#!/usr/bin/python
+
+from mininet.topo import Topo
+#from mininet.node import OVSController
+
+class MyTopo( Topo ):
+    "Simple topology example."
+
+    def __init__( self ):
+        "Create custom topo."
+        #net = Mininet(topo = topo, controller = OVSController)
+
+        # Initialize topology
+        Topo.__init__( self )
+
+        # Add hosts and switches
+        h18 = self.addHost('h18', ip='10.0.0.18')
+        h19 = self.addHost('h19', ip='10.0.0.19')
+        h20 = self.addHost('h20', ip='10.0.0.20')
+        h21 = self.addHost('h21', ip='10.0.0.21')
+        h22 = self.addHost('h22', ip='10.0.0.22')
+        h23 = self.addHost('h23', ip='10.0.0.23')
+        h24 = self.addHost('h24', ip='10.0.0.24')
+        h25 = self.addHost('h25', ip='10.0.0.25')
+        h26 = self.addHost('h26', ip='10.0.0.26')
+        h27 = self.addHost('h27', ip='10.0.0.27')
+        h28 = self.addHost('h28', ip='10.0.0.28')
+        h29 = self.addHost('h29', ip='10.0.0.29')
+        
+        s1 = self.addSwitch('s1')
+        s2 = self.addSwitch('s2')
+        s3 = self.addSwitch('s3')
+        s4 = self.addSwitch('s4')
+        s5 = self.addSwitch('s5')
+        s6 = self.addSwitch('s6')
+        s7 = self.addSwitch('s7')
+        s8 = self.addSwitch('s8')
+        s9 = self.addSwitch('s9')
+        s10 = self.addSwitch('s10')
+        s11 = self.addSwitch('s11')
+        s12 = self.addSwitch('s12')
+        s13 = self.addSwitch('s13')
+        s14 = self.addSwitch('s14')
+        s15 = self.addSwitch('s15')
+        s16 = self.addSwitch('s16')
+        s17 = self.addSwitch('s17')
+        
+        self.addLink(s2, s1)
+        self.addLink(s3, s1)
+        self.addLink(s4, s1)
+        self.addLink(s5, s1)
+        self.addLink(s2, s3)
+        self.addLink(s3, s4)
+        self.addLink(s4, s5)
+        self.addLink(s6, s2)
+        self.addLink(s6, s3)
+        self.addLink(s7, s4)
+        self.addLink(s7, s5)
+        self.addLink(s8, s2)
+        self.addLink(s8, s3)
+        self.addLink(s9, s4)
+        self.addLink(s9, s5)
+        self.addLink(s10, s2)
+        self.addLink(s10, s3)
+        self.addLink(s11, s4)
+        self.addLink(s11, s5)
+        self.addLink(s6, s7)
+        self.addLink(s7, s8)
+        self.addLink(s8, s9)
+        self.addLink(s9, s10)
+        self.addLink(s10, s11)
+        self.addLink(s12, s6)
+        self.addLink(s12, s7)
+        self.addLink(s13, s6)
+        self.addLink(s13, s7)
+        self.addLink(s14, s8)
+        self.addLink(s14, s9)
+        self.addLink(s15, s8)
+        self.addLink(s15, s9)
+        self.addLink(s16, s10)
+        self.addLink(s16, s11)
+        self.addLink(s17, s10)
+        self.addLink(s17, s11)
+        self.addLink(h18, s12)
+        self.addLink(h19, s12)
+        self.addLink(h20, s13)
+        self.addLink(h21, s13)
+        self.addLink(h22, s14)
+        self.addLink(h23, s14)
+        self.addLink(h24, s15)
+        self.addLink(h25, s15)
+        self.addLink(h26, s16)
+        self.addLink(h27, s16)
+        self.addLink(h28, s17)
+        self.addLink(h29, s17)
+
+topos = { 'simple_worker1_novo': ( lambda: MyTopo() ) }
