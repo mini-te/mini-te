@@ -9,6 +9,16 @@ We evaluate the communication between Mininets in
 separated physical hosts with Open vSwitch 2.5.0,
 DB Schema 7.12.1, and dpctl 1.3. 
 
+How to start?
+=============
+
+* Mininet install:
+
+```
+# git clone https://github.com/mininet/mininet.git
+# ./mininet/util/install.sh -n3fxw
+```
+
 
 
 
