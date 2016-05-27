@@ -9,8 +9,8 @@ We evaluate the communication between Mininets in
 separated physical hosts with Open vSwitch 2.5.0,
 DB Schema 7.12.1, and dpctl 1.3. 
 
-How to start?
-=============
+Part I: How to start?
+=====================
 
 * Mininet must be installed on each Virtual Machine:
 
@@ -60,6 +60,11 @@ but outside Mininet environment:
 # ./add_gre_tun.sh
 # ./del_gre_tun.sh
 ```
+
+Part 2:
+=======
+
+Manage OpenFlow rules with MilpFlow project at: https://github.com/milpflow/milpflow
 
 
 Other useful commands:
