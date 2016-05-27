@@ -12,22 +12,38 @@ DB Schema 7.12.1, and dpctl 1.3.
 How to start?
 =============
 
-* Mininet install:
+* Mininet must be installed on each Virtual Machine:
 
 ```
 # git clone https://github.com/mininet/mininet.git
 # ./mininet/util/install.sh -n3fxw
 ```
 
+Now, we set-up GRE tunnels between two Virtual Machines(VM).
+We start our environment on VM1 as follows:
 
+```
+# cd mini-te
+# ./iniciar_mininet.sh
+# mn --custom p1.py --topo p1 --switch ovsk
+mininet> h1 xterm&
+   # ./p1.tuneis
+```
 
+And, outside Mininet environment of VM1:
+```
+# ./p1_regras.sh
+```
 
--Some useful commands to update this repository:
+Other useful commands:
+======================
 
--git config --global user.email "email at email"
+Some useful commands to update this repository:
 
--git add .
+* git config --global user.email "email at email"
 
--git commit "Changes"
+* git add .
 
--git push origin master
+* git commit "Changes"
+
+* git push origin master
